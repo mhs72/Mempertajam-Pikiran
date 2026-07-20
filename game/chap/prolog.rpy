@@ -101,8 +101,28 @@ label prolog:
     show gilang mt_lirik mlt_standar -efk_marah
     show santi als_standar mt_standar -efk_keringat
     mnk als_bingung mt_standar mlt_standar1 -efk_cemas "Memang Tumpek Landep itu hari sucinya motor?"
-    show gita als_bingung mt_mikir mlt_standar1
+    show gita als_bingung mt_mikir mlt_standar1 with dissolve
     gta "Hari suci nya benda-benda besi gak sih?"
+    show gilang als_marah mt_pejam mlt_tawa
+    show santi als_sedih mt_lirik
+    show gita mt_lirik mlt_standar
+    glg "Hari pamer motor hahahah!"
+    show santi mt_pejam mlt_standar1 efk_fyuh
+    show gita mt_standar
+    snt "Haah.. bukan."
+    hide gilang
+    hide gita
+    show santi als_standar mt_standar mlt_standar -efk_fyuh at center with moveintop
+    snt "Ya sudah, biar kalian gak berisik, aku akan panggil [bdy] untuk menggantikan jam pelajaran yang kosong."
+    mnk als_marah mt_bete mlt_teriak efk_kaget "EHH!!!" with vpunch
+    show santi at left
+    show gita als_marah mt_kaget mlt_teriak efk_kaget with vpunch
+    gta "Tapi mapel agama Hindu kan di jam terakhir!"
+    show gilang als_marah mt_standar mlt_teriak efk_x at right
+    show santi als_marah mt_pejam
+    glg "Jangan seenaknya gitu dong, mentang-mentang jadi {b}pejabat{/b} di sini!" with vpunch
+    hide gilang with moveinbottom
+    "Mendengar ucapan [glg], [snt] langsung berjalan ke depan kelas."
 
 
     return
