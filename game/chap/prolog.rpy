@@ -43,10 +43,13 @@ label prolog:
     glg "Nyebelin banget! Padahal telat juga gak masalah, kan pagi ini jam kosong!"
     glg "Jadi gak bisa pamer deh! hahaha!"
     swa2 "Aku baru ingat kalau hari ini motor itu diupacarai sejak lihat motornya [mnk] di parkiran yang sudah dihias."
-    mnk als_bingung mt_lirik mlt_standar "?"
-    show gilang als_bingung mt_standar mlt_standar with dissolve
-    show swa1 at left with dissolve
-    show swa2 at right with dissolve
+    show pop1 with dissolve
+    mnk als_bingung mt_lirik mlt_standar "{i}Motorku?{/i}"
+    hide pop1 with dissolve
+    show gilang als_bingung mt_standar mlt_standar
+    show swa1 at left 
+    show swa2 at right
+    with dissolve
     "Mendengar namaku disebut, aku refleks menoleh ke belakang. Gilang dan dua temannya, menatapku."
     swa1 "Keluargamu rajin dan religius sekali ya, [mnk]."
     mnk mt_mikir mlt_standar "Hmm.. gak juga."
@@ -112,17 +115,27 @@ label prolog:
     snt "Haah.. bukan."
     hide gilang
     hide gita
-    show santi als_standar mt_standar mlt_standar -efk_fyuh at center with moveintop
+    show santi als_standar mt_standar mlt_standar -efk_fyuh at center with moveinbottom
     snt "Ya sudah, biar kalian gak berisik, aku akan panggil [bdy] untuk menggantikan jam pelajaran yang kosong."
     mnk als_marah mt_bete mlt_teriak efk_kaget "EHH!!!" with vpunch
-    show santi at left
+    show santi als_sedih at left
     show gita als_marah mt_kaget mlt_teriak efk_kaget with vpunch
     gta "Tapi mapel agama Hindu kan di jam terakhir!"
     show gilang als_marah mt_standar mlt_teriak efk_x at right
+    show gita mt_standar mlt_standar -efk_kaget
     show santi als_marah mt_pejam
-    glg "Jangan seenaknya gitu dong, mentang-mentang jadi {b}pejabat{/b} di sini!" with vpunch
-    hide gilang with moveinbottom
-    "Mendengar ucapan [glg], [snt] langsung berjalan ke depan kelas."
+    glg "Jangan seenaknya gitu dong, mentang-mentang jadi {b}pejabat{/b} di sini!!" with vpunch
+    hide gilang 
+    hide gita
+    with dissolve
+    show santi als_standar mt_pejam mlt_standar1 efk_fyuh
+    "Mendengar ucapan [glg], [snt] menghela nafas sesaat. Lalu berjalan ke depan kelas."
+    show santi mt_lirik mlt_standar -efk_fyuh at center with moveintop
+    "Santi pun berdiri menghadap ke arah teman-teman kelas"
+    show santi mt_standar mlt_standar1
+    snt "Teman-teman apakah kalian terganggu dengan keberisikan ini?"
+    
+    
 
 
     return
