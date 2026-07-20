@@ -70,11 +70,39 @@ label prolog:
     show gita mlt_standar
     show gilang mlt_standar1
     mnk als_sedih mt_cemas mlt_teriak efk_cemas "{i}Aduuh! Gimana ini?! Jadi makin ribut!{/i}" with hpunch
-    "Gita dan Gilang biasanya susah dilerai kalau sudah bertengkar."
+    "[gta] dan [glg] biasanya susah dilerai kalau sudah bertengkar."
     show gita mt_sipit -efk_x
     show gilang mt_sipit -efk_x
     mnk mt_bete mlt_standar1 efk_fyuh "{i}Percuma aku menegur mereka, suaraku seperti rakyat kecil, tidak akan didengar.{/i}"
     mnk als_sedih mt_cemas mlt_teriak efk_cemas "{i}Tapi kalau dibiarin nanti makin memanas situasinya!{/i}" with hpunch
+    show santi als_marah mt_pejam mlt_standar papan
+    snt "Sudah cukup!"
+    show santi mt_standar
+    show gita mt_lirik
+    show gilang mt_mikir
+    "Ketua kelas kami, [snt], langsung berdiri dari tempat duduknya di bangku depan."
+    hide gita with dissolve
+    show santi als_standar at left with moveinleft
+    show gilang mt_standar mlt_standar
+    "[snt] menghela nafas sebentar sebelum membalikkan badannya."
+    show santi als_sedih mlt_standar
+    snt "[glg], kamu sudah tahu kalau sendiri pun sudah lelah menegurmu."
+    show santi als_sedih mlt_standar1
+    show gilang mt_mikir
+    snt "Padahal sekarang hari suci Tumpek Landep dan kita juga sudah sembahyang, kenapa kamu masih belum berubah?"
+    show gilang mt_marah mlt_teriak efk_x
+    show santi mt_pejam als_sedih mlt_standar1
+    glg "Berubah?!" with vpunch
+    show santi mt_pejam mlt_standar efk_keringat
+    glg "Mentang-mentang sekarang upacara motor! Aku harus berubah jadi apa? knalpot?!" with vpunch
+    "Gilang menjawab dengan berteriak."
+    show gilang mt_marah mlt_standar1 efk_marah
+    "Namun, terlepas dari reaksi hebohnya, muncul pertanyaan di benakku tentang hari suci yang diperingati hari ini."
+    show gilang mt_lirik mlt_standar -efk_marah
+    show santi als_standar mt_standar -efk_keringat
+    mnk als_bingung mt_standar mlt_standar1 -efk_cemas "Memang Tumpek Landep itu hari sucinya motor?"
+    show gita als_bingung mt_mikir mlt_standar1
+    gta "Hari suci nya benda-benda besi gak sih?"
 
 
     return
