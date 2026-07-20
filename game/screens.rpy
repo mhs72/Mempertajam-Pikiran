@@ -281,9 +281,12 @@ screen quick_menu():
             textbutton _("Setting") action ShowMenu('preferences')
 
         fixed:
-            style_prefix "quick"
-
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle"):
+            imagebutton:
+                idle "gui/auto_play.svg"
+                hover "gui/auto_play.svg"
+                selected_idle "gui/auto_pause.svg"
+                selected_hover "gui/auto_pause.svg"
+                action Preference("auto-forward", "toggle")
                 xalign 1.0
                 yalign 0.0
                 xoffset -30
@@ -426,7 +429,11 @@ style main_menu_frame:
     yfill True
     xalign 1.0
 
-    background "gui/overlay/main_menu.png"
+    background Transform(
+        "gui/overlay/main_menu.png",
+        crop=(0, 0, 420, 1080),
+        xzoom=-1,
+    )
 
 style main_menu_vbox:
     xalign 0.0
@@ -1582,9 +1589,12 @@ screen quick_menu():
             textbutton _("Menu") action ShowMenu()
 
         fixed:
-            style_prefix "quick"
-
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle"):
+            imagebutton:
+                idle "gui/auto_play.svg"
+                hover "gui/auto_play.svg"
+                selected_idle "gui/auto_pause.svg"
+                selected_hover "gui/auto_pause.svg"
+                action Preference("auto-forward", "toggle")
                 xalign 1.0
                 yalign 0.0
                 xoffset -30
