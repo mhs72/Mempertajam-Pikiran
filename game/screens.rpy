@@ -272,7 +272,7 @@ screen quick_menu():
             style_prefix "quick"
             style "quick_menu"
 
-            textbutton _("Kembali") action MainMenu(confirm=True)
+            textbutton _("Kembali") action Rollback()
             textbutton _("Riwayat") action ShowMenu('history')
             textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Simpan") action ShowMenu('save')
@@ -281,6 +281,15 @@ screen quick_menu():
             textbutton _("Setting") action ShowMenu('preferences')
 
         fixed:
+            imagebutton:
+                idle "gui/back_to_menu.svg"
+                hover "gui/back_to_menu.svg"
+                action MainMenu(confirm=True)
+                xalign 0.0
+                yalign 0.0
+                xoffset 30
+                yoffset 30
+
             imagebutton:
                 idle "gui/auto_play.svg"
                 hover "gui/auto_play.svg"
@@ -1584,11 +1593,20 @@ screen quick_menu():
             style "quick_menu"
             style_prefix "quick"
 
-            textbutton _("Kembali") action MainMenu(confirm=True)
+            textbutton _("Kembali") action Rollback()
             textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Menu") action ShowMenu()
 
         fixed:
+            imagebutton:
+                idle "gui/back_to_menu.svg"
+                hover "gui/back_to_menu.svg"
+                action MainMenu(confirm=True)
+                xalign 0.0
+                yalign 0.0
+                xoffset 30
+                yoffset 30
+
             imagebutton:
                 idle "gui/auto_play.svg"
                 hover "gui/auto_play.svg"
