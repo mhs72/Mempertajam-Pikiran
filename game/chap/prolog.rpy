@@ -42,15 +42,16 @@ label prolog:
     glg "Motorku belum dibantenin dan ayahku terburu-buru mengantarku ke sekolah agar tidak terlambat."
     glg "Nyebelin banget! Padahal telat juga gak masalah, kan pagi ini jam kosong!"
     glg "Jadi gak bisa pamer deh! hahaha!"
-    swa2 "Aku baru ingat kalau hari ini motor itu diupacarai sejak lihat motornya [mnk] di parkiran yang sudah dihias."
-    show pop1 with dissolve
+    
+    swa2 "Aku baru ingat kalau hari ini, motor diupacarai sejak lihat motornya [mnk] di parkiran yang sudah dihias."
+    show pop1 with moveintop
     mnk als_bingung mt_lirik mlt_standar "{i}Motorku?{/i}"
-    hide pop1 with dissolve
+    hide pop1 with moveouttop
     show gilang als_bingung mt_standar mlt_standar
     show swa1 at left 
     show swa2 at right
     with dissolve
-    "Mendengar namaku disebut, aku refleks menoleh ke belakang. Gilang dan dua temannya, menatapku."
+    "Mendengar namaku disebut, aku refleks menoleh ke belakang. [glg] dan dua temannya, menatapku."
     swa1 "Keluargamu rajin dan religius sekali ya, [mnk]."
     mnk mt_mikir mlt_standar "Hmm.. gak juga."
     show gilang als_marah mt_mikir mlt_standar1
@@ -76,20 +77,19 @@ label prolog:
     "[gta] dan [glg] biasanya susah dilerai kalau sudah bertengkar."
     show gita mt_sipit -efk_x
     show gilang mt_sipit -efk_x
-    mnk mt_bete mlt_standar1 efk_fyuh "{i}Percuma aku menegur mereka, suaraku seperti rakyat kecil, tidak akan didengar.{/i}"
+    mnk mt_bete mlt_standar1 efk_fyuh "{i}Percuma aku menegur mereka, suaraku seperti rakyat kecil yang tidak didengar.{/i}"
     mnk als_sedih mt_cemas mlt_teriak efk_cemas "{i}Tapi kalau dibiarin nanti makin memanas situasinya!{/i}" with hpunch
-    show santi als_marah mt_pejam mlt_standar papan
+    show santi als_marah mt_pejam mlt_standar papan with moveinbottom
     snt "Sudah cukup!"
     show santi mt_standar
     show gita mt_lirik
     show gilang mt_mikir
     "Ketua kelas kami, [snt], langsung berdiri dari tempat duduknya di bangku depan."
-    hide gita with dissolve
+    hide gita with moveoutleft
     show santi als_standar at left with moveinleft
     show gilang mt_standar mlt_standar
-    "[snt] menghela nafas sebentar sebelum membalikkan badannya."
     show santi als_sedih mlt_standar
-    snt "[glg], kamu sudah tahu kalau sendiri pun sudah lelah menegurmu."
+    snt "[glg], kamu sudah tahu kalau aku sendiri pun sudah lelah menegurmu."
     show santi als_sedih mlt_standar1
     show gilang mt_mikir
     snt "Padahal sekarang hari suci Tumpek Landep dan kita juga sudah sembahyang, kenapa kamu masih belum berubah?"
@@ -98,9 +98,8 @@ label prolog:
     glg "Berubah?!" with vpunch
     show santi mt_pejam mlt_standar efk_keringat
     glg "Mentang-mentang sekarang upacara motor! Aku harus berubah jadi apa? knalpot?!" with vpunch
-    "Gilang menjawab dengan berteriak."
     show gilang mt_marah mlt_standar1 efk_marah
-    "Namun, terlepas dari reaksi hebohnya, muncul pertanyaan di benakku tentang hari suci yang diperingati hari ini."
+    "Terlepas dari reaksi hebohnya, muncul pertanyaan di benakku tentang hari suci yang diperingati hari ini."
     show gilang mt_lirik mlt_standar -efk_marah
     show santi als_standar mt_standar -efk_keringat
     mnk als_bingung mt_standar mlt_standar1 -efk_cemas "Memang Tumpek Landep itu hari sucinya motor?"
@@ -111,11 +110,12 @@ label prolog:
     show gita mt_lirik mlt_standar
     glg "Hari pamer motor hahahah!"
     show santi mt_pejam mlt_standar1 efk_fyuh
-    show gita mt_standar
-    snt "Haah.. bukan."
     hide gilang
     hide gita
-    show santi als_standar mt_standar mlt_standar -efk_fyuh at center with moveinbottom
+    with dissolve
+    show santi mt_pejam mlt_standar1 efk_fyuh
+    snt "Haah.. bukan."
+    show santi als_standar mt_standar mlt_standar -efk_fyuh at center with moveinleft
     snt "Ya sudah, biar kalian gak berisik, aku akan panggil [bdy] untuk menggantikan jam pelajaran yang kosong."
     mnk als_marah mt_bete mlt_teriak efk_kaget "EHH!!!" with vpunch
     show santi als_sedih at left
@@ -128,14 +128,101 @@ label prolog:
     hide gilang 
     hide gita
     with dissolve
-    show santi als_standar mt_pejam mlt_standar1 efk_fyuh
+    show santi als_standar mt_pejam mlt_standar1 efk_fyuh at center with moveinbottom
     "Mendengar ucapan [glg], [snt] menghela nafas sesaat. Lalu berjalan ke depan kelas."
-    show santi mt_lirik mlt_standar -efk_fyuh at center with moveintop
-    "Santi pun berdiri menghadap ke arah teman-teman kelas"
+    show santi mt_standar mlt_standar1 -efk_fyuh
+    snt "Teman-teman apakah kalian terganggu dengan keributan yang dibuat [glg]?"
+    "Siswa-Siswi" "Terganggu!"
+    "Sebagian besar siswa langsung menjawab serentak."
+    hide santi
+    show gilang als_marah mt_sipit mlt_teriak efk_marah
+    glg "{b}WOY!! AKU HAJAR KALIAN PAS PULANG NANTI!!{/b}" with vpunch
+    show gilang mlt_standar1 at right
+    show santi als_standar mt_lirik mlt_standar1 papan
+    snt "[glg], Aku akan melaporkan ancamanmu ini langsung ke ayahmu."
+    show gilang mt_lirik efk_keringat
+    glg "Cih!"
+    hide gilang with dissolve
+    show santi mt_standar
+    snt "Jadi, apakah kalian setuju bila jam pelajaran agama Hindu dimajukan?"
+    show santi mlt_standar
+    "Siswa-siswi mulai berdiskusi satu sama lain. Mereka sepertinya ragu untuk meninggalkan kenyamanan di jam kosong ini."
+    "[snt] menyadari keraguan itu, jadi dia mencoba membuat tawaran."
+    show santi mt_pejam mlt_senyum1
+    snt "Jika jam terakhir kita majukan, maka setelah ini yang ada hanyalah jam kosong. Jadi kita bisa pulang lebih awal." 
+    show santi mlt_senyum
+    snt "Aku akan menyampaikannya pada wali kelas kita."
+    "Siswa" "Oke Gas!!" with vpunch
+    "Siswi" "Panggil saja [bdy], [snt]!"
+    show santi mt_standar mlt_senyum1
+    snt "Baik, semuanya. Aku ke kantor guru sekarang."
+    show santi mlt_senyum
+    show gita at left with dissolve
+    show gilang als_marah at right with dissolve
+    "Santi pun tersenyum lalu melirik ke arahku, [gta], dan [glg]. Kemudian dia berjalan menuju pintu keluar."
+    hide gita
+    hide gilang
+    with dissolve
+    show santi at left with moveinleft
+    show santi mt_lirik mlt_standar
+    "Di depan pintu kelas, Santi menoleh sebentar ke dalam."
     show santi mt_standar mlt_standar1
-    snt "Teman-teman apakah kalian terganggu dengan keberisikan ini?"
+    snt "Oh iya, semuanya, jangan lupa siapkan PR kalian ya!"
+    hide santi with moveoutleft
+    "Lalu dia berjalan pergi."
+    mnk als_standar mt_standar mlt_standar -efk_kaget "..."
+    mnk als_sedih mt_bete mlt_teriak efk_kaget "Oh Iya! ada PR!!!" with hpunch
+    show gilang als_marah mt_marah mlt_tawa efk_keringat
+    glg "Hahahah! Belum buat PR ya!! Kasihann!" with vpunch
+    show gilang als_marah mt_lirik mlt_senyum1
+    "Padahal [glg] sendiri sedang panik mencontek jawaban teman di sebelahnya. Mata dan tangannya bergerak dengan sangat cepat!"
+    hide gilang with dissolve
+    "Aku pun segera mengeluarkan buku LKS Agama Hindu dan peralatan tulisku."
+    mnk mt_cemas mlt_standar1 efk_keringat "{i}Padahal kemarin aku sudah hendak membuatnya, tapi aku merasa ragu dengan jawabanku sendiri.{/i}"
+    mnk mt_bete efk_fyuh "{i}Ujung-ujungnya aku tidak buat apa-apa.{/i}"
+    show pop2 with moveintop
+    pause 0.5
+    show pop2a:
+        alpha 0.0
+        xpos 100
+        linear 0.5 xpos 0 alpha 1.0
+    show gita mlt_senyum at right with moveinright
+    gta "Manik, ini punyaku."
+    "Gita menyodorkan jawabannya ke arahku."
+    mnk als_angkat mt_standar mlt_standar1 -efk_keringat "Eh.. boleh?"
+    show gita mlt_senyum1
+    gta "Sama persis juga gak apa-apa kok, gak bakal ketahuan juga."
+    mnk als_bingung mlt_standar "Yakin gak ketahuan? Ini esai lho, bukan pilihan ganda."
+    show gita als_marah mlt_standar1
+    gta "Udah pake aja! Ribet banget! Memang kamu mau bikin sendiri sekarang? Yakin bakal kelar?, enggak kan?!" with hpunch
+    hide gita with dissolve
+    hide pop2a
+    show pop2b:
+        alpha 0.0
+        xpos -100
+        easein 0.5 xpos 0 alpha 1.0
+        pause 1.0
+    show pop2c:
+        alpha 0.0
+        ypos 100
+        linear 0.5 ypos 0 alpha 1.0
+    "Mendengar itu, aku merasa cukup sedih. Tapi ujung-ujungnya aku meniru jawabannya."
+    show pop2d with dissolve
+    "Aku mulai mengerahkan semua fokusku untuk menyontek agar cepat selesai."
+    show pop2d with dissolve
+    "Namun aku menemukan kalimat yang membuatku ragu."
+    mnk als_bingung mt_standar mlt_standar1 "Gita, ini bener jawabannya? Sebenarnya bukan gini gak si—"
+    hide pop2
+    hide pop2b
+    hide pop2c
+    hide pop2d
+    with moveouttop
+    "Tiba-tiba buku tulisku dan buku tulis gita ditarik berbarengan."
+    screen cg1
+    show cg1a
+    with fade
+    mnk als_sedih mt_kaget mlt_marah efk_kaget "!!!" with hpunch
+
     
     
-
-
     return

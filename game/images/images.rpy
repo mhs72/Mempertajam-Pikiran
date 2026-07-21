@@ -4,6 +4,11 @@ image kelas = "bg/kls.jpeg"
 image kantin = "bg/ktn.jpeg"
 image perpus = "bg/pps.jpeg"
 
+# CG
+image cg1 = "cg/cg_1.png"
+image cg1a = "cg/cg_1a.png"
+image cg1b = "cg/cg_1b.png"
+
 # Character
 define mnk = Character ("Manik", image = "manik", color = "#0e573d")
 define gta = Character ("Gita", image = "gita", color = "#734a79")
