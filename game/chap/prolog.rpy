@@ -218,10 +218,79 @@ label prolog:
     hide pop2d
     with moveouttop
     "Tiba-tiba buku tulisku dan buku tulis gita ditarik berbarengan."
-    screen cg1
-    show cg1a
-    with fade
+    window hide
+    show cg1 with fade:
+        xanchor 0.5
+        yanchor 0.5
+        easein 1.0 ypos 200 #kanan
+        pause 0.5
+        easein 1.0 ypos 600 xpos 1200 #kiri
+        pause 0.5
+        easein 1.0 ypos 1000 xpos 1000 #kanan
+        pause 0.5
+        easeout 1.0 zoom 0.5 xalign 0.5 yalign 0.5
+    pause 5.0
+    window show
     mnk als_sedih mt_kaget mlt_marah efk_kaget "!!!" with hpunch
+    show cg1 buka
+    bdy "Apa yang kamu lakukan [mnk]?"
+    show cg1 tutup
+    bdy "Menyontek?"
+    show cg1 buka
+    bdy "Kamu tidak buat tugas?"
+    mnk als_sedih mt_lirik mlt_standar efk_keringat "..."
+    hide cg1 with dissolve
+    pause 0.5
+    show budayu with dissolve
+    bdy "Ini bukumu, [gta]?"
+    show gita als_sedih mt_standar mlt_standar1 efk_keringat at right with dissolve
+    gta "..I-iya, bu.."
+    show budayu mlt_standar1
+    bdy "Kenapa kamu membiarkan [mnk] menyontek tugasmu?"
+    show budayu mlt_standar
+    show gita mt_pejam mlt_standar
+    gta "..."
+    hide budayu with dissolve
+    hide gita with dissolve
+    "Bu Dayu membawa kedua buku tulis itu ke meja guru."
+    show santi als_sedih mt_standar mlt_standar1 efk_keringat papan with dissolve
+    "Santi tampak cemas melihat kejadian ini, dia buru-buru menuju meja nya dan membuat salam pembuka."
+    hide santi with dissolve
+    snt "{i}Asana Panganjali{/i}"
+    "Siswa-Siswi" "Om Swastyastu"
+    show budayu mt_pejam mlt_standar1 with dissolve
+    bdy "Om Swastyastu"
+    show budayu mt_lirik mlt_standar
+    "[bdy] pun duduk dan memperhatikan kedua buku tulis itu. Pupil matanya bergerak dari kanan ke kiri, dari satu buku ke buku yang satunya."
+    "Sementara para siswa duduk terdiam dengan raut wajah yang tegang."
+    hide budayu with dissolve
+    "Dalam keheningan itu aku mendengar suara kecil dari belakang, dan aku yakin bukan hanya aku yang mendengarnya."
+    glg "Mampus."
+    mnk als_sedih mt_bete mlt_teriak efk_cemas "{i}Mampus benar! memang mampus aku hari ini!! Aku harus gimana sekarang?! Apakah aku akan dihukum? Dibentak? Atau nilaiku diturunkan?! Gawat aku dalam masalah besar!{/i}"
+    mnk mt_pejam mlt_standar "{i}Seharusnya aku tidak menyontek [gta]!{/i}"
+    show gita als_sedih mt_standar mlt_standar efk_keringat with dissolve
+    "Aku menoleh ke arah [gta] disebelahku, dan raut wajahnya juga sama paniknya denganku."
+    hide gita with dissolve
+    show budayu als_marah mt_standar with dissolve
+    "Kemudian Bu Dayu datang ke mejaku dan menaruh kedua buku itu dengan sedikit pukulan." with hpunch
+    show budayu mlt_teriak
+    bdy "Sama persis. Bahkan sampai salah eja pun masih kamu jiplak?!"
+    show budayu mlt_standar
+    mnk als_sedih mt_pejam "...!"
+    show budayu mlt_standar1
+    bdy "[mnk], di pelajaran Ibu, yang Ibu nilai pertama adalah kejujuran."
+    show budayu als_standar mlt_standar
+    bdy "Walaupun nilai kalian kecil, tapi asalkan kamu jujur dan bertanggung jawab, Ibu tidak akan pernah membuat kalian remidi."
+    show budayu mt_pejam
+    bdy "Paling hanya tugas rumah tambahan."
+    show budayu als_bingung mt_standar mlt_standar1
+    bdy "[gta], kamu adalah salah satu siswa pintar di kelas ini tapi kejadian ini membuat ibu kecewa."
+    show gita als_sedih mt_pejam mlt_standar1 at right with dissolve
+    gta "... Maaf bu.."
+    hide budayu with dissolve
+    hide gita with dissolve
+    "Kemudian Bu dayu berjalan ke depan kelas."
+
 
     
     
