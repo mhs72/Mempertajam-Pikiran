@@ -158,12 +158,33 @@ style say_label:
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
+    slow_cps True
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
 
     adjust_spacing False
+
+
+## Indikator lanjut muncul setelah seluruh dialog selesai ditampilkan.
+screen ctc(arg=None):
+    zorder 100
+
+    add "gui/ctc_indicator.svg":
+        xpos gui.dialogue_xpos + gui.dialogue_width - 55
+        yalign 1.0
+        yoffset -100
+        at ctc_pulse
+
+
+transform ctc_pulse:
+    alpha 0.4
+    yoffset 0
+    ease 0.45 alpha 1.0 yoffset 6
+    ease 0.45 alpha 0.4 yoffset 0
+    repeat
+
 
 ## Layar masukkan/input ########################################################
 ##
@@ -251,14 +272,25 @@ screen quick_menu():
             style_prefix "quick"
             style "quick_menu"
 
-            textbutton _("Kembali") action Rollback()
+            textbutton _("Kembali") action MainMenu(confirm=True)
             textbutton _("Riwayat") action ShowMenu('history')
             textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle")
             textbutton _("Simpan") action ShowMenu('save')
             textbutton _("Simpan.C") action QuickSave()
             textbutton _("Muat.C") action QuickLoad()
             textbutton _("Setting") action ShowMenu('preferences')
+
+        fixed:
+            imagebutton:
+                idle "gui/auto_play.svg"
+                hover "gui/auto_play.svg"
+                selected_idle "gui/auto_pause.svg"
+                selected_hover "gui/auto_pause.svg"
+                action Preference("auto-forward", "toggle")
+                xalign 1.0
+                yalign 0.0
+                xoffset -30
+                yoffset 30
 
 
 ## Kode ini memastikan layar quick_menu di tampilkan di dalam permainan,
@@ -292,12 +324,16 @@ style quick_button_text:
 ## Layar ini di ikutsertakan di menu utama dan permainan, dan menyediakan
 ## navigasi ke menu lainnya, dan untuk memulai permainan.
 
-screen navigation():
+screen navigation(main_menu_layout=False):
 
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
+        if main_menu_layout:
+            xalign 1.0
+            xoffset -220
+        else:
+            xpos gui.navigation_xpos
         yalign 0.5
 
         spacing gui.navigation_spacing
@@ -368,7 +404,7 @@ screen main_menu():
 
     ## Pernyataan 'use' mengikutsertakan layar lain ke layar ini. Isi
     ## sebenarnya dari menu utama adalah layar navigasi.
-    use navigation
+    use navigation(main_menu_layout=True)
 
     if gui.show_name:
 
@@ -391,12 +427,17 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
+    xalign 1.0
 
-    background "gui/overlay/main_menu.png"
+    background Transform(
+        "gui/overlay/main_menu.png",
+        crop=(0, 0, 420, 1080),
+        xzoom=-1,
+    )
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
+    xalign 0.0
+    xoffset 30
     xmaximum 1200
     yalign 1.0
     yoffset -30
@@ -406,9 +447,13 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    xalign 0.0
+    text_align 0.0
 
 style main_menu_version:
     properties gui.text_properties("version")
+    xalign 0.0
+    text_align 0.0
 
 
 ## layar Menu Permainan ########################################################
@@ -1539,10 +1584,21 @@ screen quick_menu():
             style "quick_menu"
             style_prefix "quick"
 
-            textbutton _("Kembali") action Rollback()
+            textbutton _("Kembali") action MainMenu(confirm=True)
             textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Otomatis") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
+
+        fixed:
+            imagebutton:
+                idle "gui/auto_play.svg"
+                hover "gui/auto_play.svg"
+                selected_idle "gui/auto_pause.svg"
+                selected_hover "gui/auto_pause.svg"
+                action Preference("auto-forward", "toggle")
+                xalign 1.0
+                yalign 0.0
+                xoffset -30
+                yoffset 30
 
 
 style window:
