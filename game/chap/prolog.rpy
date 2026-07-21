@@ -280,18 +280,51 @@ label prolog:
     show budayu mlt_standar1
     bdy "[mnk], di pelajaran Ibu, yang Ibu nilai pertama adalah kejujuran."
     show budayu als_standar mlt_standar
-    bdy "Walaupun nilai kalian kecil, tapi asalkan kamu jujur dan bertanggung jawab, Ibu tidak akan pernah membuat kalian remidi."
+    bdy "Walaupun nilai kalian kecil, tapi asalkan kalian jujur dan bertanggung jawab, Ibu tidak akan pernah membuat kalian remidi."
     show budayu mt_pejam
     bdy "Paling hanya tugas rumah tambahan."
     show budayu als_bingung mt_standar mlt_standar1
     bdy "[gta], kamu adalah salah satu siswa pintar di kelas ini tapi kejadian ini membuat ibu kecewa."
-    show gita als_sedih mt_pejam mlt_standar1 at right with dissolve
+    show gita als_sedih mt_pejam mlt_standar1 at right with moveinright
     gta "... Maaf bu.."
     hide budayu with dissolve
     hide gita with dissolve
     "Kemudian Bu dayu berjalan ke depan kelas."
+    show budayu with dissolve
+    bdy "Perhatian semuanya, PR kalian hari ini tidak akan ibu periksa."
+    "Siswa-Siswi" "yes..."
+    "Suara kejayaan kecil dalam situasi yang tegang. Tidak ada yang berani bersuara keras."
+    show budayu mt_lirik
+    bdy "Namun dua teman kalian ini akan mengikuti remedial khusus setelah jam pulang sekolah."
+    show budayu als_bingung mt_pejam
+    show gita als_sedih mt_kaget mlt_teriak efk_kaget at right
+    mnk als_sedih mt_kaget mlt_teriak efk_kaget "HAH?!" with hpunch
+    show budayu als_standar mt_standar
+    hide gita with dissolve
+    "Saking kagetnya, aku tidak bisa menahan suaraku."
+    show budayu  mlt_standar1
+    bdy "Ibu melakukan ini agar tidak ada lagi yang meniru perbuatan kalian lagi."
+    show budayu mlt_standar
+    bdy "Terutama kamu, [mnk]."
+    mnk mt_standar mlt_standar1 efk_keringat "..!"
+    mnk mlt_standar "...Maaf Bu, saya janji tidak akan melakukannya lagi."
+    show budayu mlt_standar1
+    bdy "Ibu akan mempercayai itu, jika dan hanya jika [mnk] mendapat nilai 100 pada remedial ini."
+    show budayu mlt_standar
+    mnk mlt_standar1 "?!"
+    gta "..heh."
+    show budayu mlt_standar1
+    bdy "Jika kalian berdua mendapat nilai rata-rata, ibu anggap kalian sudah sedikit belajar dan itu cukup."
+    show budayu mlt_standar
+    bdy "Tapi jika gagal, temui saya di ruang BK senin depan untuk mendapat tugas tambahan."
+    mnk mlt_standar "... Baik bu."
+    hide budayu with dissolve
+    "Mendengar itu beberapa siswa mulai berbisik dan tampak senang karena tugasnya tidak diperiksa. Beberapa ada yang diam saja karena merasa kasihan pada kami."
+    show santi als_sedih mt_lirik at left
+    show gilang als_bingung mlt_senyum1 at right
+    with dissolve
+    glg "...haha."
 
-
-    
+    jump bagian1
     
     return
