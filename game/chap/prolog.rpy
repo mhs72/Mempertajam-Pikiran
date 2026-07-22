@@ -11,7 +11,8 @@ label prolog:
     "Hari ini banyak guru yang izin tidak bisa mengajar karena mengikuti upacara agama."
     "Sehingga akan ada banyak jam kosong yang dimanfaatkan oleh banyak siswa untuk mengobrol dan bermain." 
     "Bukan belajar secara mandiri."
-    "Di kelasku, 10 C. Sudah ada 3 guru yang menginfokan tidak bisa mengajar."
+    "Di kelasku, 10 C. Para siswa leluasa makan di kelas, tidur, dan bermain. Hanya saja mereka tidak ke luar kelas kecuali ke toilet."
+    "Sudah ada 3 guru yang menginfokan tidak bisa mengajar."
     "Jadi kami diberikan tugas sebagai gantinya dan tidak boleh berisik."
 
     mnk als_sedih mt_pejam mlt_senyum efk_keringat "{i}Yah… walau itu percuma. Ujung-ujungnya tetap saja berisik..{/i}"
@@ -326,5 +327,5 @@ label prolog:
     glg "...haha."
 
     jump bagian1
-    
+
     return
