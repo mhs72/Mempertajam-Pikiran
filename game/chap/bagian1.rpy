@@ -129,10 +129,28 @@ label bagian1:
     "Bu Dayu melihat ke arahku dan [gta]. Sepertinya contoh itu ditargetkan pada kami berdua."
     scene kelas with fade
     "Bel istirahat kedua pun berbunyi."
-    
-
-
-
+    show budayu mlt_standar1 with dissolve
+    bdy "Sekian dari ibu untuk jam pelajaran hari ini"
+    show budayu mlt_standar
+    bdy "[snt] apa kamu sudah melaporkannya ke wali kelas?"
+    show santi papan at left with dissolve 
+    snt "Sudah Bu, kami diizinkan pulang lebih awal."
+    hide santi with dissolve
+    bdy "Baiklah. Kalian dipersilakan untuk pulang."
+    show budayu mt_lirik mlt_standar1
+    bdy "Tapi [mnk], [gta], ingat kalau kalian akan remedial di kelas ini setelah bel pulang nanti. Jadi tetap di sekolah."
+    show budayu mlt_standar
+    bdy "Soal remedial ini berkaitan dengan apa yang Ibu ajarkan tadi. Jadi belajarlah secara mandiri dari buku atau sumber lain."
+    show budayu mt_standar
+    mnk als_sedih " Baik, Bu.."
+    show gita als_bingung mt_pejam at right with dissolve
+    gta "...baik, Bu.."
+    hide gita 
+    hide budayu
+    with dissolve
+    snt "{i}Asana Parama Santih{/i}"
+    "Siswa-siswi" "{i}Om Santih Santih Santih Om{/i}"
+    call screen amanat(1)
 
 
     return

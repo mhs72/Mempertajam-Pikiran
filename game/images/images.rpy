@@ -107,7 +107,7 @@ style amanat:
     text_align 0.5
     xmaximum 900
 
-#Fungsi amanat
+#Fungsi amanat #panggil screen dengan call screen amanat(nomor amanat)
 screen amanat(amanat):
     add bg_putih:
         at transform:
