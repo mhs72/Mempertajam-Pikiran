@@ -16,11 +16,11 @@ layeredimage cg1:
 
 
 # Character
-define mnk = Character ("Manik", image = "manik", color = "#0e573d")
-define gta = Character ("Gita", image = "gita", color = "#734a79")
-define bdy = Character ("Bu Dayu", image = "budayu", color = "#364f79")
-define snt = Character ("Santi", image = "santi", color = "#e16c8e")
-define glg = Character ("Gilang", image = "gilang", color = "#993434")
+define mnk = Character ("Manik", image = "manik", color = "#ffffff")
+define gta = Character ("Gita", image = "gita", color = "#ffffff")
+define bdy = Character ("Bu Dayu", image = "budayu", color = "#ffffff")
+define snt = Character ("Santi", image = "santi", color = "#ffffff")
+define glg = Character ("Gilang", image = "gilang", color = "#ffffff")
 define swa1 = Character ("Siswa 1", image = "swa1")
 define swa2 = Character ("Siswa 2", image = "swa2")
 define swi1 = Character ("Siswi 1", image = "swi1")

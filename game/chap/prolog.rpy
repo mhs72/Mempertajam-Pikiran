@@ -258,9 +258,9 @@ label prolog:
     "Santi tampak cemas melihat kejadian ini, dia buru-buru menuju meja nya dan membuat salam pembuka."
     hide santi with dissolve
     snt "{i}Asana Panganjali{/i}"
-    "Siswa-Siswi" "Om Swastyastu"
+    "Siswa-Siswi" "{i}Om Swastyastu{/i}"
     show budayu mt_pejam mlt_standar1 with dissolve
-    bdy "Om Swastyastu"
+    bdy "{i}Om Swastyastu{/i}"
     show budayu mt_lirik mlt_standar
     "[bdy] pun duduk dan memperhatikan kedua buku tulis itu. Pupil matanya bergerak dari kanan ke kiri, dari satu buku ke buku yang satunya."
     "Sementara para siswa duduk terdiam dengan raut wajah yang tegang."
@@ -273,7 +273,7 @@ label prolog:
     "Aku menoleh ke arah [gta] disebelahku, dan raut wajahnya juga sama paniknya denganku."
     hide gita with dissolve
     show budayu als_marah mt_standar with dissolve
-    "Kemudian Bu Dayu datang ke mejaku dan menaruh kedua buku itu dengan sedikit pukulan." with hpunch
+    "Kemudian Bu Dayu datang ke mejaku dan menaruh kedua buku itu dengan sedikit pukulan." with vpunch
     show budayu mlt_teriak
     bdy "Sama persis. Bahkan sampai salah eja pun masih kamu jiplak?!"
     show budayu mlt_standar

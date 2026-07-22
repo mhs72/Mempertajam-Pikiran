@@ -1,5 +1,5 @@
 label bagian1:
-    
+
     scene kelas with fade
     show budayu with dissolve
     bdy "Hmm.. hari ini hanya ibu yang dapat mengisi jam pelajaran ya.. "
@@ -68,9 +68,9 @@ label bagian1:
                 show budayu als_bingung mt_pejam
                 gta "Pfft..!"
                 glg "Kenapa tidak sekalian “pikiran memotong, mengiris, mencincang”?"
-                "Siswa-siswi" "Hahaha!"
+                "Siswa-siswi" "Hahaha!" with hpunch
                 show budayu als_marah mt_standar mlt_teriak
-                bdy "Tenang semuanya!"
+                bdy "Tenang semuanya!" with vpunch
                 show budayu als_standar mlt_standar1
                 bdy "“Pikiran menusuk” dalam puisi bisa diartikan sebagai pikiran yang menyakitkan."
                 show budayu mlt_standar

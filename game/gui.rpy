@@ -109,7 +109,7 @@ define gui.textbox_yalign = 1.0
 
 ## Penempatan nama karakter yang berbicara, hampir sama dengan kotak text. 
 define gui.name_xpos = 400
-define gui.name_ypos = 0
+define gui.name_ypos = -50
 
 ## Penempatan  horizontal nama karakter. Ini dapat berupa 0.0 untuk rata kiri,
 ## 0.5 untuk rata tengah, dan 1.0 untuk rata kanan. 
@@ -121,7 +121,7 @@ define gui.namebox_width = None
 define gui.namebox_height = None
 
 ## Tepi kotak bersisi urutan nama karakter, di kiri, atas, kanan, bawah.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(20, 15, 20, 15)
 
 ## Jika Benar, latar dari kotaknama akan di beri judul, jika Salah, latar dari
 ## kotaknama akan di ukur ulang.
@@ -212,8 +212,8 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
-define gui.choice_button_text_hover_color = "#ffffff"
+define gui.choice_button_text_idle_color = '#404040'
+define gui.choice_button_text_hover_color = "#000000"
 define gui.choice_button_text_insensitive_color = '#7070707f'
 
 

@@ -102,11 +102,46 @@ screen say(who, what):
         id "window"
 
         if who is not None:
+            if who == "Manik": #namebox berubah sesuai nama
+                window:
+                    style "namebox"
+                    background Frame("gui/nb_mnk.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+                    padding gui.namebox_borders.padding
+                    text who id "who"
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            elif who == "Gita": 
+                window:
+                    style "namebox"
+                    background Frame("gui/nb_gta.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+                    padding gui.namebox_borders.padding
+                    text who id "who"
+
+            elif who == "Santi":
+                window:
+                    style "namebox"
+                    background Frame("gui/nb_snt.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+                    padding gui.namebox_borders.padding
+                    text who id "who"
+
+            elif who == "Gilang": 
+                window:
+                    style "namebox"
+                    background Frame("gui/ng_glg.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+                    padding gui.namebox_borders.padding
+                    text who id "who"
+
+            elif who == "Bu Dayu": 
+                window:
+                    style "namebox"
+                    background Frame("gui/nb_bdy.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+                    padding gui.namebox_borders.padding
+                    text who id "who"
+        
+            else:
+                window:
+                    id "namebox"
+                    style "namebox"
+                    text who id "who"
 
         text what id "what"
 
