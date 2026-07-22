@@ -1,4 +1,5 @@
 label bagian1:
+    
     scene kelas with fade
     show budayu with dissolve
     bdy "Hmm.. hari ini hanya ibu yang dapat mengisi jam pelajaran ya.. "
