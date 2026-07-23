@@ -26,7 +26,7 @@ define config.check_conflicting_properties = True
 ## Warna text pada antarmuka.
 
 ## Warna aksen yang digunakan sepanjang interface sampai pewarnaan text.
-define gui.accent_color = '#0099ff'
+define gui.accent_color = '#ad3938'
 
 ## Warna yang di gunakan untuk warna tombol text jika di pilih atau di tekan.
 define gui.idle_color = '#707070'
@@ -36,7 +36,7 @@ define gui.idle_color = '#707070'
 define gui.idle_small_color = '#606060'
 
 ## Warna yang di gunakan untuk tombol dan bar yang di pilih.
-define gui.hover_color = '#0099ff'
+define gui.hover_color = '#ad3938'
 
 ## Warna yang digunakan untuk text tombol ketika di pijit tapi tidak di fokus.
 ## Tombol di pilih jika terdapat di layar saat ini atau value preferensi.
@@ -65,7 +65,7 @@ define gui.text_font = "gui/font/Vera.ttf"
 define gui.name_text_font = "gui/font/LTSoul-Bold.otf"
 
 ## Font yang digunakan untuk text di luar permainan.
-define gui.interface_text_font = "gui/font/Vera.ttf"
+define gui.interface_text_font = "gui/font/LTSoul-Bold.otf"
 
 ## Ukuran normal dialog text.
 define gui.text_size = 33
@@ -203,7 +203,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 
 ## Tombol Pilihan ##############################################################
 ##
-## Choice buttons are used in the in-game menus.
+##  buttons are used in the in-game menus.
 
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None

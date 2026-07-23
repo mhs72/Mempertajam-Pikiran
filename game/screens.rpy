@@ -309,21 +309,22 @@ screen quick_menu():
 
             textbutton _("Kembali") action Rollback()
             textbutton _("Riwayat") action ShowMenu('history')
-            textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Simpan") action ShowMenu('save')
-            textbutton _("Simpan.C") action QuickSave()
-            textbutton _("Muat.C") action QuickLoad()
+            # textbutton _("Simpan.C") action QuickSave()
+            # textbutton _("Muat.C") action QuickLoad()
+            textbutton _("Muat") action ShowMenu("load")
             textbutton _("Setting") action ShowMenu('preferences')
 
         fixed:
             imagebutton:
-                idle "gui/back_to_menu.svg"
-                hover "gui/back_to_menu.svg"
+                idle "gui/back_idle.png"
+                hover "gui/back_hover.png"
                 action MainMenu(confirm=True)
                 xalign 0.0
                 yalign 0.0
-                xoffset 30
-                yoffset 30
+                xoffset 25
+                yoffset 25
 
             imagebutton:
                 idle "gui/auto_play.svg"
@@ -455,11 +456,15 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+                #menambahkan judul
+            add "gui/judul.png":
+                zoom 0.2
 
-            text "[config.version]":
-                style "main_menu_version"
+            # text "[config.name!t]":
+            #     style "main_menu_title"
+
+            # text "[config.version]":
+            #     style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -480,11 +485,13 @@ style main_menu_frame:
     )
 
 style main_menu_vbox:
-    xalign 0.0
-    xoffset 30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
+    xalign 0.98
+    yalign 0.02
+    # xalign 0.0
+    # xoffset 30
+    # xmaximum 1200
+    # yalign 1.0
+    # yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -764,8 +771,8 @@ screen file_slots(title):
                     if config.has_autosave:
                         textbutton _("{#auto_page}O") action FilePage("auto")
 
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}C") action FilePage("quick")
+                    # if config.has_quicksave:
+                    #     textbutton _("{#quick_page}C") action FilePage("quick")
 
                     ## antara(1,10) beri nomor antara 1 sampai 9.
                     for page in range(1, 10):
@@ -1629,13 +1636,13 @@ screen quick_menu():
             style_prefix "quick"
 
             textbutton _("Kembali") action Rollback()
-            textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
+            #textbutton _("Lompati") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Menu") action ShowMenu()
 
         fixed:
             imagebutton:
-                idle "gui/back_to_menu.svg"
-                hover "gui/back_to_menu.svg"
+                idle "gui/back_idle.png"
+                hover "gui/back_hover.png"
                 action MainMenu(confirm=True)
                 xalign 0.0
                 yalign 0.0

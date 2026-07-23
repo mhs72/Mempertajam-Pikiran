@@ -12,7 +12,8 @@
 ##
 ## Tanda _() yang mengelilingi string menandai itu dapat di terjemahkan.
 
-define config.name = _("Mempertajam Pikiran")
+#Menampilkan judul game
+# define config.name = _("Mempertajam Pikiran")
 
 
 ## Meng determinasikan apakah judul yang di berikan di atas di tampilkan di

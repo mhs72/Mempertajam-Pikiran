@@ -287,8 +287,123 @@ screen amanat(amanat):
         background None
     
 
+#Tambahkan efek next kelap-kelip?
+    #Gaya tulisan sesi cover
+style judulsesi:
+    font "gui/font/LTSoul-Bold.otf"
+    size 40
+    xalign 0.5
+    ypos 246
 
-#Tambahkan efek next kelap-kelip
+style isisesi:
+    font "gui/font/LTSoul-Bold.otf"
+    size 50
+    xalign 0.5
+    ypos 330
+
+## Sesi Cover
+screen sesi (sesi):
+    add "sesi/bg_sesi.jpg":
+        at transform:
+            alpha 0.0
+            linear 0.5 alpha 1.0
+
+    add "sesi/sesi_kts1.png": #muncul kiri ata
+        at transform:
+            xoffset -200
+            yoffset -200
+            easein 0.7 xoffset 0.0 yoffset 0.0
+
+    add "sesi/sesi_kps.png": #muncul sisi kanan atas
+        at transform:
+            xoffset 200
+            yoffset -200
+            easein 0.7 xoffset 0.0 yoffset 0.0
+    add "sesi/sesi_jpn.png":
+        at transform:
+            xoffset -100
+            yoffset -200
+            easein 0.7 xoffset 0.0 yoffset 0.0
+
+    add "sesi/sesi_kts2.png":
+        at transform:
+            xoffset -200
+            yoffset 200
+            easein 0.7 xoffset 0.0 yoffset 0.0
+
+    add "sesi/sesi_bku.png":
+        at transform:
+            yoffset 200
+            easein 0.7 yoffset 0.0
+
+    add "sesi/byn.png":
+        at transform:
+            alpha 0.0
+            pause 1.0
+            linear 0.5 alpha 1.0
+
+    add "amnt_bingkai":
+        at transform:
+            alpha 0.0
+            pause 0.5
+            easein 0.5 zoom 1.0 alpha 1.0
+
+    add "amnt_kirib":
+        at transform:
+            xoffset -200
+            yoffset 200
+            easein 0.7 xoffset 0.0 yoffset 0.0
+
+    add "amnt_kanana":
+        at transform:
+            xoffset 200
+            yoffset -200
+            easein 0.7 xoffset 0.0 yoffset 0.0 
+
+
+    if sesi == 0:
+        text "Bersambung...":
+            font "gui/font/LTSoul-Bold.otf"
+            style "isisesi"
+            at transform:
+                alpha 0.0
+                pause 1.0
+                linear 0.5 alpha 1.0
+
+    if sesi == 1:
+        text "Sesi 1":
+            style "judulsesi"
+            at transform:
+                alpha 0.0
+                pause 1.0
+                linear 0.5 alpha 1.0
+        text "Belajar":
+            font "gui/font/LTSoul-Bold.otf"
+            style "isisesi"
+            at transform:
+                alpha 0.0
+                pause 1.0
+                linear 0.5 alpha 1.0
+
+    button:
+        at transform:
+            alpha 0.0
+            pause 1.5
+            linear 0.5 alpha 1.0
+            
+        xalign 0.5
+        ypos 500
+        background"#ffffff"
+        hover_background "#4d6968"
+        padding (25, 15, 25, 15)
+        
+        action Return ()
+
+        text "Lanjut":
+            font "gui/font/LTSoul-Bold.otf"
+            size 50
+            color "#000000"
+
 
 ## Side Manik
 layeredimage side manik:

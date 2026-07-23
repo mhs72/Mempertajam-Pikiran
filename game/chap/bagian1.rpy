@@ -1,5 +1,6 @@
 label bagian1:
-
+    window hide
+    call screen sesi(1)
     scene kelas with fade
     show budayu with dissolve
     bdy "Hmm.. hari ini hanya ibu yang dapat mengisi jam pelajaran ya.. "
@@ -152,6 +153,9 @@ label bagian1:
     snt "{i}Asana Parama Santih{/i}"
     "Siswa-siswi" "{i}Om Santih Santih Santih Om{/i}"
     call screen amanat(1)
+
+
+    call screen sesi(0)
 
 
     return
